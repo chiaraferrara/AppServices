@@ -1,6 +1,5 @@
-h2{
-    margin: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&display=swap');
+
 .example-card {
     max-width: 400px;
     height: 550px;
@@ -8,14 +7,14 @@ h2{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-top-right-radius: 2rem ; 
     border-top-left-radius: 2rem ;
-    background: linear-gradient(0deg, rgba(57,61,65,1) 0%, rgba(82,88,95,1) 43%, rgba(53,57,65,1) 100%);
-    color: white;
+    background: linear-gradient(180deg, rgba(249,249,249,1) 38%, rgba(249,249,249,1) 47%, rgba(214,214,214,1) 100%);
+    color: rgb(0, 0, 0);
   }
   mat-card-subtitle{
-    color: white;
+    color: rgb(0, 0, 0);
   }
 mat-divider{
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     margin-bottom: 2em;
 }
  
@@ -24,5 +23,13 @@ mat-divider{
     flex-wrap: wrap; 
     overflow-x: auto;  
     justify-content: center;
+    padding-inline:10%;
   }
-  
+  h1{
+    text-align: center;
+    color: #000000;
+    padding: 2%;
+    font-family: 'Alumni Sans Collegiate One', sans-serif;
+    font-size: 120px;
+    
+  }
