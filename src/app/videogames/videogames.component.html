@@ -11,7 +11,7 @@
 <div class="card-container">
   <div *ngFor="let videogame of videogames">
     <mat-card class="example-card">
-      <img [attr.src]="videogame.source" style="border-top-right-radius: 2rem ; border-top-left-radius: 2rem ;">
+      <img [attr.src]="videogame.source" style="border-top-right-radius: 2rem ; border-top-left-radius: 2rem ; height: 200px;">
       <mat-card-header>
         <mat-card-title>{{videogame.title}}</mat-card-title>
         <mat-card-subtitle>Release Date: {{videogame.releaseDate}}</mat-card-subtitle>
