@@ -4,13 +4,14 @@ import {MatCardModule} from '@angular/material/card';
 import { ServicesService } from '../services/services.service';
 import { CommonModule } from '@angular/common';
 
+import {MatDividerModule} from '@angular/material/divider';
 
 @Component({
   selector: 'app-videogames',
   templateUrl: './videogames.component.html',
   styleUrls: ['./videogames.component.css'],
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, CommonModule],
+  imports: [MatCardModule, MatButtonModule, CommonModule, MatDividerModule],
 })
 
 
@@ -19,7 +20,7 @@ export class VideogamesComponent {
   videogames : any[] = [];
  
 
-  constructor(private servizio : ServicesService){
+  constructor(public servizio : ServicesService){
 
   }
 

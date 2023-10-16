@@ -8,25 +8,31 @@
     <span *ngIf="!videogame.isAvailable" style="color: red;">Not Available</span> <br>
     {{videogame.price}}€
 </div> -->
-
-<div *ngFor="let videogame of videogames" >
-<mat-card class="example-card">
-    <img [attr.src]= "videogame.source">
-    <mat-card-header>
-      <mat-card-title>{{videogame.title}}</mat-card-title>
-      <mat-card-subtitle>Release Date: {{videogame.releaseDate}}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-        <ng-template [ngIf]="videogame.isAvailable"><p>Available</p></ng-template>
-    <ng-template [ngIf]="!videogame.isAvailable" style="color: red;"><p>Not Available</p></ng-template> <br>
-    {{videogame.price}}€
-    </mat-card-content>
-    <mat-card-actions>
-      <button  mat-button 
-      *ngIf="videogame.isAvailable">BUY ON STEAM</button>
-    </mat-card-actions>
-  </mat-card>
-  <br>
+<div class="card-container">
+  <div *ngFor="let videogame of videogames">
+    <mat-card class="example-card">
+      <img [attr.src]="videogame.source" style="border-top-right-radius: 2rem ; border-top-left-radius: 2rem ;">
+      <mat-card-header>
+        <mat-card-title>{{videogame.title}}</mat-card-title>
+        <mat-card-subtitle>Release Date: {{videogame.releaseDate}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-divider></mat-divider>
+        {{videogame.description}}
+        <ng-template [ngIf]="videogame.isAvailable">
+          <p>Available</p>
+        </ng-template>
+        <ng-template [ngIf]="!videogame.isAvailable" style="color: red;">
+          <p>Not Available</p>
+        </ng-template> <br>
+        {{videogame.price}}€
+      </mat-card-content>
+      <mat-card-actions>
+        
+          <button mat-button *ngIf="videogame.isAvailable" (click)="servizio.buyRedirect(videogame)">BUY ON STEAM</button>
+        <button mat-button *ngIf="!videogame.isAvailable">NOT AVAILABLE TO BUY</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>
-
 <ng-template></ng-template>

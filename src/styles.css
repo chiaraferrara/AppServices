@@ -2,6 +2,8 @@
 
 body{
     font-family: 'Merriweather', serif;
+    background-color: #3b3f44;
+    background-size: cover;
 }
 html, body { height: 100%; }
 body { font-family: Roboto, "Helvetica Neue", sans-serif; }
