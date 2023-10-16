@@ -30,8 +30,8 @@
       </mat-card-content>
       <mat-card-actions>
         
-          <button mat-button *ngIf="videogame.isAvailable" (click)="servizio.buyRedirect(videogame)">BUY ON STEAM</button>
-        <button mat-button *ngIf="!videogame.isAvailable">NOT AVAILABLE TO BUY</button>
+          <button mat-raised-button *ngIf="videogame.isAvailable" (click)="servizio.buyRedirect(videogame)">BUY ON STEAM</button>
+        <button mat-raised-button disabled *ngIf="!videogame.isAvailable">NOT AVAILABLE TO BUY</button>
       </mat-card-actions>
     </mat-card>
   </div>
