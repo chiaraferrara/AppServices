@@ -1,0 +1,30 @@
+<!-- <h1>Videogames</h1>
+<div *ngFor="let videogame of videogames">
+    <h2>{{videogame.title}}</h2>
+     <br>
+    <span>Release Date:</span>
+    {{videogame.releaseDate}} <br>
+    <span *ngIf="videogame.isAvailable">Available</span>
+    <span *ngIf="!videogame.isAvailable" style="color: red;">Not Available</span> <br>
+    {{videogame.price}}€
+</div> -->
+
+<div *ngFor="let videogame of videogames" >
+<mat-card class="example-card">
+    <img [attr.src]= "videogame.source">
+    <mat-card-header>
+      <mat-card-title>{{videogame.title}}</mat-card-title>
+      <mat-card-subtitle>Release Date: {{videogame.releaseDate}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <span *ngIf="videogame.isAvailable">Available</span>
+    <span *ngIf="!videogame.isAvailable" style="color: red;">Not Available</span> <br>
+    {{videogame.price}}€
+    </mat-card-content>
+    <mat-card-actions>
+      <button  mat-button 
+      *ngIf="videogame.isAvailable">BUY ON STEAM</button>
+    </mat-card-actions>
+  </mat-card>
+  <br>
+</div>
