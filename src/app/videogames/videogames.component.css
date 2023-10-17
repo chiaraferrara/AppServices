@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&display=swap');
 
 .example-card {
-    max-width: 400px;
+    width: 300px;
     height: 550px;
     margin: 10px; 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -33,3 +33,5 @@ mat-divider{
     font-size: 120px;
     
   }
+
+ 
