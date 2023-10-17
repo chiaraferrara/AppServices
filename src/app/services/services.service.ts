@@ -131,8 +131,8 @@ export class ServicesService {
 
   carousel : string[]= [
     
-      'https://static.cdprojektred.com/cms.cdprojektred.com/16x9_big/56c9f65d12f0e9e7d16c7d47d1d00991d04dcca6-1920x1080.jpg',
-      'https://twistedvoxel.com/wp-content/uploads/2023/08/starfield.jpg'
+      'https://raw.githubusercontent.com/chiaraferrara/AppServices/master/src/app/img/phantom_liberty.png?token=GHSAT0AAAAAACIBWKBUE2WV7DT5OWN7Q4XCZJOV6XA',
+      'https://raw.githubusercontent.com/chiaraferrara/AppServices/master/src/app/img/starfield.jpg?token=GHSAT0AAAAAACIBWKBUSKMDHWSFE34UJBYYZJOV7IA'
     
   ];
   
