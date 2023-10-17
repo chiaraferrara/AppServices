@@ -131,8 +131,8 @@ export class ServicesService {
 
   carousel : string[]= [
     
-      'https://raw.githubusercontent.com/chiaraferrara/AppServices/master/src/app/img/phantom_liberty.png?token=GHSAT0AAAAAACIBWKBUE2WV7DT5OWN7Q4XCZJOV6XA',
-      'https://raw.githubusercontent.com/chiaraferrara/AppServices/master/src/app/img/starfield.jpg?token=GHSAT0AAAAAACIBWKBUSKMDHWSFE34UJBYYZJOV7IA'
+      'https://raw.githubusercontent.com/chiaraferrara/AppServices/master/src/app/img/phantom_liberty.png',
+      'https://raw.githubusercontent.com/chiaraferrara/AppServices/master/src/app/img/starfield.png'
     
   ];
   
