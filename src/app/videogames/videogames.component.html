@@ -11,9 +11,21 @@
 
 <!-- <h1>Stop<span style="color: red">Game</span></h1> -->
 
+<!-- HOME GOES HERE -->
 
-<!-- all games go here -->
 <mat-tab-group  fitInkBarToContent >
+  <mat-tab label="Home"
+    >
+    <div class="parent">
+      <div class="div1"> un div </div>
+      <div class="div2"> un altro div</div>
+      <div class="div3"> un terzo div</div>
+      </div>
+  
+  </mat-tab>
+<!-- END HOME -->
+
+  <!-- all games go here -->
   <mat-tab label="All"
     ><div class="card-container">
       <div *ngFor="let videogame of videogames">
@@ -51,7 +63,7 @@
               (click)="servizio.buyRedirect(videogame)"
             >
               BUY ON STEAM
-            </button> <img *ngIf="videogame.releaseDate === 2023" src="src/app/img/new.png">
+            </button> <img *ngIf="videogame.releaseDate === 2023" src="https://raw.githubusercontent.com/chiaraferrara/AppServices/master/src/app/img/new.png" style="width: 60px; margin-left: 70px;">
             <button mat-raised-button disabled *ngIf="!videogame.isAvailable">
               NOT AVAILABLE TO BUY
             </button>
@@ -105,7 +117,7 @@
               (click)="servizio.buyRedirect(videogame)"
             >
               BUY ON STEAM
-            </button>
+            </button> <img *ngIf="videogame.releaseDate === 2023" src="https://raw.githubusercontent.com/chiaraferrara/AppServices/master/src/app/img/new.png" style="width: 60px; margin-left: 70px;">
             <button mat-raised-button disabled *ngIf="!videogame.isAvailable">
               NOT AVAILABLE TO BUY
             </button>
@@ -159,7 +171,7 @@
               (click)="servizio.buyRedirect(videogame)"
             >
               BUY ON STEAM
-            </button>
+            </button> <img *ngIf="videogame.releaseDate === 2023" src="https://raw.githubusercontent.com/chiaraferrara/AppServices/master/src/app/img/new.png" style="width: 60px; margin-left: 70px;">
             <button mat-raised-button disabled *ngIf="!videogame.isAvailable">
               NOT AVAILABLE TO BUY
             </button>

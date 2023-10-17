@@ -7,13 +7,14 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatDividerModule} from '@angular/material/divider';
 import { CarouselComponent } from '../carousel/carousel.component';
 import { Input } from '@angular/core';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @Component({
   selector: 'app-videogames',
   templateUrl: './videogames.component.html',
   styleUrls: ['./videogames.component.css'],
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, CommonModule, MatDividerModule , MatTabsModule],
+  imports: [MatGridListModule, MatCardModule, MatButtonModule, CommonModule, MatDividerModule , MatTabsModule],
 })
 
 
