@@ -6,6 +6,16 @@ import { Injectable } from '@angular/core';
 export class ServicesService {
 
   videogames = [
+{
+  source: 'https://images.everyeye.it/img-notizie/cyberpunk-2077-phantom-liberty-fase-finale-sviluppo-350-persone-lavoro-v6-612143-1280x720.webp', 
+  title: 'Cyberpunk Phantom Liberty',
+  description: 'Experience the dystopian future in this thrilling cyberpunk expansion for Phantom Liberty. Uncover new secrets and challenges as you navigate the dark, high-tech world.',
+  releaseDate: 2023, 
+  isAvailable: true,
+  price: 25, 
+  buylink: 'https://store.steampowered.com/app/2138330/Cyberpunk_2077_Phantom_Liberty/', 
+  usato: false,
+},
     {
       source: 'https://cdn.akamai.steamstatic.com/steam/apps/1599340/header.jpg?t=1695752294',
       title: 'Lost Ark',
@@ -130,7 +140,7 @@ export class ServicesService {
   ];
 
   carousel : string[]= [
-    
+      'https://raw.githubusercontent.com/chiaraferrara/AppServices/master/src/app/img/cyberpunk.png',
       'https://raw.githubusercontent.com/chiaraferrara/AppServices/master/src/app/img/phantom_liberty.png',
       'https://raw.githubusercontent.com/chiaraferrara/AppServices/master/src/app/img/starfield.png'
     

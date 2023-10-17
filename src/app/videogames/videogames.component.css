@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&display=swap');
 
+
 .example-card {
     width: 300px;
     height: 550px;
@@ -10,6 +11,10 @@
     background: linear-gradient(180deg, rgba(249,249,249,1) 38%, rgba(249,249,249,1) 47%, rgba(214,214,214,1) 100%);
     color: rgb(0, 0, 0);
   }
+  .new_item{
+    
+}
+
   mat-card-subtitle{
     color: rgb(0, 0, 0);
   }
@@ -33,5 +38,7 @@ mat-divider{
     font-size: 120px;
     
   }
+
+ 
 
  

@@ -13,11 +13,11 @@
 
 
 <!-- all games go here -->
-<mat-tab-group  fitInkBarToContent>
+<mat-tab-group  fitInkBarToContent >
   <mat-tab label="All"
     ><div class="card-container">
       <div *ngFor="let videogame of videogames">
-        <mat-card class="example-card">
+        <mat-card class="example-card new_item" [ngClass]="{ new_item : videogame.releaseDate === 2023}">
           <img
             [attr.src]="videogame.source"
             style="
@@ -51,7 +51,7 @@
               (click)="servizio.buyRedirect(videogame)"
             >
               BUY ON STEAM
-            </button>
+            </button> <img *ngIf="videogame.releaseDate === 2023" src="src/app/img/new.png">
             <button mat-raised-button disabled *ngIf="!videogame.isAvailable">
               NOT AVAILABLE TO BUY
             </button>
