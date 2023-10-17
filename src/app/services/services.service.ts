@@ -14,6 +14,7 @@ export class ServicesService {
       isAvailable: true,
       price: 50,
       buylink: 'https://store.steampowered.com/app/1599340/Lost_Ark/',
+      usato: false,
     },
     {
       source: 'https://multiplayer.net-cdn.it/thumbs/images/2023/08/14/baldurs-gate-3-cover_jpg_1600x900_crop_q85.jpg',
@@ -23,6 +24,7 @@ export class ServicesService {
       isAvailable: true,
       price: 60,
       buylink: 'https://store.steampowered.com/app/1086940/Baldurs_Gate_3/',
+      usato: false,
     },
     {
       source: 'https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/portals_3/2x1_SuperMarioHub_image1280w.jpg',
@@ -32,6 +34,7 @@ export class ServicesService {
       isAvailable: false,
       price: 40,
       buylink: ' ',
+      usato: true,
     },
     {
       source: 'https://cdn1.epicgames.com/offer/77f2b98e2cef40c8a7437518bf420e47/EGS_Cyberpunk2077_CDPROJEKTRED_S1_03_2560x1440-359e77d3cd0a40aebf3bbc130d14c5c7',
@@ -41,6 +44,7 @@ export class ServicesService {
       isAvailable: true,
       price: 60,
       buylink: 'https://store.steampowered.com/app/1091500/Cyberpunk_2077/',
+      usato: true,
     },
 
     {
@@ -50,7 +54,8 @@ export class ServicesService {
       releaseDate: 2018 ,
       isAvailable: true,
       price: 59,
-      buylink: 'https://store.steampowered.com/app/582010/Monster_Hunter_World/'
+      buylink: 'https://store.steampowered.com/app/582010/Monster_Hunter_World/',
+      usato: false,
     },
     {
       source: "https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_DarkSoulsRemastered.jpg",
@@ -59,7 +64,8 @@ export class ServicesService {
       releaseDate: 2018,
       isAvailable: true,
       price: 19.99,
-      buylink: "https://store.steampowered.com/app/570940/DARK_SOULS_REMASTERED/"
+      buylink: "https://store.steampowered.com/app/570940/DARK_SOULS_REMASTERED/",
+      usato: true,
     },
     {
       source: "https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/H2x1_NSwitchDS_TheWitcher3WildHunt_enGB.jpg",
@@ -68,7 +74,8 @@ export class ServicesService {
       releaseDate: 2015,
       isAvailable: true,
       price: 29.99,
-      buylink: "https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/"
+      buylink: "https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/",
+      usato: false,
     },
     {
       source: "https://cdn.akamai.steamstatic.com/steam/apps/413150/capsule_616x353.jpg?t=1666917466",
@@ -77,7 +84,8 @@ export class ServicesService {
       releaseDate: 2016,
       isAvailable: true,
       price: 14.99,
-      buylink: "https://store.steampowered.com/app/413150/Stardew_Valley/"
+      buylink: "https://store.steampowered.com/app/413150/Stardew_Valley/",
+      usato: true,
     },
     {
       source: "https://www.uagna.it/wp-content/uploads/2023/09/lies-of-p.jpg",
@@ -86,7 +94,8 @@ export class ServicesService {
       releaseDate: 2023,
       isAvailable: true,
       price: 24.99,
-      buylink: "https://store.steampowered.com/app/1627720/Lies_of_P/"
+      buylink: "https://store.steampowered.com/app/1627720/Lies_of_P/",
+      usato: false,
     },
     {
       source: "https://image.api.playstation.com/vulcan/ap/rnd/202211/2212/4zIDTVwCOcyU0B51RywhFNE0.jpg",
@@ -95,7 +104,8 @@ export class ServicesService {
       releaseDate: 2023,
       isAvailable: true,
       price: 49.99,
-      buylink: "https://store.steampowered.com/app/1846380/Need_for_Speed_Unbound/"
+      buylink: "https://store.steampowered.com/app/1846380/Need_for_Speed_Unbound/",
+      usato: false,
     },
     {
       source: "https://assets.xboxservices.com/assets/0e/6f/0e6f0524-3852-420f-924a-5a9cd9eb6517.jpg?n=029940003_GLP-Page-Hero-0_1083x609.jpg",
@@ -104,7 +114,8 @@ export class ServicesService {
       releaseDate: 2022,
       isAvailable: true,
       price: 59.99,
-      buylink: "https://store.steampowered.com/app/1716740/Starfield/"
+      buylink: "https://store.steampowered.com/app/1716740/Starfield/",
+      usato: false,
     },
     {
       source: "https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/2x1_NSwitchDS_Overwatch2_Season6_image1600w.png",
@@ -113,7 +124,8 @@ export class ServicesService {
       releaseDate: 2023,
       isAvailable: true,
       price: '0',
-      buylink: "https://store.steampowered.com/app/2357570/Overwatch_2/"
+      buylink: "https://store.steampowered.com/app/2357570/Overwatch_2/",
+      usato: true,
     }
   ]
 

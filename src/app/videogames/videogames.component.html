@@ -8,32 +8,212 @@
     <span *ngIf="!videogame.isAvailable" style="color: red;">Not Available</span> <br>
     {{videogame.price}}€
 </div> -->
-<h1>Game <span style="color:red">Stop</span></h1>
-<div class="card-container">
-  <div *ngFor="let videogame of videogames">
-    <mat-card class="example-card">
-      <img [attr.src]="videogame.source" style="border-top-right-radius: 2rem ; border-top-left-radius: 2rem ; height: 200px;">
-      <mat-card-header>
-        <mat-card-title>{{videogame.title}}</mat-card-title>
-        <mat-card-subtitle>Release Date: {{videogame.releaseDate}}</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        <mat-divider></mat-divider>
-        {{videogame.description}}
-        <ng-template [ngIf]="videogame.isAvailable">
-          <p>Available</p>
-        </ng-template>
-        <ng-template [ngIf]="!videogame.isAvailable" style="color: red;">
-          <p>Not Available</p>
-        </ng-template> <br>
-        {{videogame.price}}€
-      </mat-card-content>
-      <mat-card-actions>
-        
-          <button mat-raised-button *ngIf="videogame.isAvailable" (click)="servizio.buyRedirect(videogame)">BUY ON STEAM</button>
-        <button mat-raised-button disabled *ngIf="!videogame.isAvailable">NOT AVAILABLE TO BUY</button>
-      </mat-card-actions>
-    </mat-card>
+
+<h1>Stop<span style="color: red">Game</span></h1>
+
+<!-- all games go here -->
+<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+  <mat-tab label="All"
+    ><div class="card-container">
+      <div *ngFor="let videogame of videogames">
+        <mat-card class="example-card">
+          <img
+            [attr.src]="videogame.source"
+            style="
+              border-top-right-radius: 2rem;
+              border-top-left-radius: 2rem;
+              height: 200px;
+            "
+          />
+          <mat-card-header>
+            <mat-card-title>{{ videogame.title }}</mat-card-title>
+            <mat-card-subtitle
+              >Release Date: {{ videogame.releaseDate }}</mat-card-subtitle
+            >
+          </mat-card-header>
+          <mat-card-content>
+            <mat-divider></mat-divider>
+            {{ videogame.description }}
+            <ng-template [ngIf]="videogame.isAvailable">
+              <p>Available</p>
+            </ng-template>
+            <ng-template [ngIf]="!videogame.isAvailable" style="color: red">
+              <p>Not Available</p>
+            </ng-template>
+            <br />
+            {{ videogame.price | currency:'EUR'}}
+          </mat-card-content>
+          <mat-card-actions>
+            <button
+              mat-raised-button
+              *ngIf="videogame.isAvailable"
+              (click)="servizio.buyRedirect(videogame)"
+            >
+              BUY ON STEAM
+            </button>
+            <button mat-raised-button disabled *ngIf="!videogame.isAvailable">
+              NOT AVAILABLE TO BUY
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    <ng-template></ng-template>
+
+    <!-- end of all games -->
+
+    <!-- used games go here -->
+  </mat-tab>
+  <mat-tab label="Usato">
+    <div class="card-container">
+      <div *ngFor="let videogame of videogames">
+        <mat-card
+          class="example-card"
+          *ngIf="videogame.usato && videogame.isAvailable"
+        >
+          <img
+            [attr.src]="videogame.source"
+            style="
+              border-top-right-radius: 2rem;
+              border-top-left-radius: 2rem;
+              height: 200px;
+            "
+          />
+          <mat-card-header>
+            <mat-card-title>{{ videogame.title }}</mat-card-title>
+            <mat-card-subtitle
+              >Release Date: {{ videogame.releaseDate }}</mat-card-subtitle
+            >
+          </mat-card-header>
+          <mat-card-content>
+            <mat-divider></mat-divider>
+            {{ videogame.description }}
+            <ng-template [ngIf]="videogame.isAvailable">
+              <p>Available</p>
+            </ng-template>
+            <ng-template [ngIf]="!videogame.isAvailable" style="color: red">
+              <p>Not Available</p>
+            </ng-template>
+            <br />
+            {{ videogame.price | currency:'EUR' }}
+          </mat-card-content>
+          <mat-card-actions>
+            <button
+              mat-raised-button
+              *ngIf="videogame.isAvailable"
+              (click)="servizio.buyRedirect(videogame)"
+            >
+              BUY ON STEAM
+            </button>
+            <button mat-raised-button disabled *ngIf="!videogame.isAvailable">
+              NOT AVAILABLE TO BUY
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    <ng-template></ng-template>
+  </mat-tab>
+
+  <!-- fine giochi usati -->
+
+  <!-- giochi nuovi -->
+  <mat-tab label="Nuovo">
+    <div class="card-container">
+      <div *ngFor="let videogame of videogames">
+        <mat-card
+          class="example-card"
+          *ngIf="!videogame.usato && videogame.isAvailable"
+        >
+          <img
+            [attr.src]="videogame.source"
+            style="
+              border-top-right-radius: 2rem;
+              border-top-left-radius: 2rem;
+              height: 200px;
+            "
+          />
+          <mat-card-header>
+            <mat-card-title>{{ videogame.title }}</mat-card-title>
+            <mat-card-subtitle
+              >Release Date: {{ videogame.releaseDate }}</mat-card-subtitle
+            >
+          </mat-card-header>
+          <mat-card-content>
+            <mat-divider></mat-divider>
+            {{ videogame.description }}
+            <ng-template [ngIf]="videogame.isAvailable">
+              <p>Available</p>
+            </ng-template>
+            <ng-template [ngIf]="!videogame.isAvailable" style="color: red">
+              <p>Not Available</p>
+            </ng-template>
+            <br />
+            {{ videogame.price | currency:'EUR' }}
+          </mat-card-content>
+          <mat-card-actions>
+            <button
+              mat-raised-button
+              *ngIf="videogame.isAvailable"
+              (click)="servizio.buyRedirect(videogame)"
+            >
+              BUY ON STEAM
+            </button>
+            <button mat-raised-button disabled *ngIf="!videogame.isAvailable">
+              NOT AVAILABLE TO BUY
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    <ng-template></ng-template>
+  </mat-tab>
+</mat-tab-group>
+
+<ng-template>
+  <div class="card-container">
+    <div *ngFor="let videogame of videogames">
+      <mat-card class="example-card">
+        <img
+          [attr.src]="videogame.source"
+          style="
+            border-top-right-radius: 2rem;
+            border-top-left-radius: 2rem;
+            height: 200px;
+          "
+        />
+        <mat-card-header>
+          <mat-card-title>{{ videogame.title }}</mat-card-title>
+          <mat-card-subtitle
+            >Release Date: {{ videogame.releaseDate }}</mat-card-subtitle
+          >
+        </mat-card-header>
+        <mat-card-content>
+          <mat-divider></mat-divider>
+          {{ videogame.description }}
+          <ng-template [ngIf]="videogame.isAvailable">
+            <p>Available</p>
+          </ng-template>
+          <ng-template [ngIf]="!videogame.isAvailable" style="color: red">
+            <p>Not Available</p>
+          </ng-template>
+          <br />
+          {{ videogame.price }}€
+        </mat-card-content>
+        <mat-card-actions>
+          <button
+            mat-raised-button
+            *ngIf="videogame.isAvailable"
+            (click)="servizio.buyRedirect(videogame)"
+          >
+            BUY ON STEAM
+          </button>
+          <button mat-raised-button disabled *ngIf="!videogame.isAvailable">
+            NOT AVAILABLE TO BUY
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
   </div>
-</div>
-<ng-template></ng-template>
+  <ng-template></ng-template>
+</ng-template>
