@@ -5,6 +5,8 @@ import { ServicesService } from '../services/services.service';
 import { CommonModule } from '@angular/common';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatDividerModule} from '@angular/material/divider';
+import { CarouselComponent } from '../carousel/carousel.component';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-videogames',
@@ -18,10 +20,9 @@ import {MatDividerModule} from '@angular/material/divider';
 export class VideogamesComponent {
   isAvailable !: boolean;
   videogames : any[] = [];
- 
+  currentSlideIndex!: number;
 
   constructor(public servizio : ServicesService){
-
   }
 
   
@@ -30,7 +31,5 @@ export class VideogamesComponent {
     console.log(this.servizio.getVideogames())
     this.videogames = this.servizio.getVideogames();
   }
-
-  
 
 }

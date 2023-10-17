@@ -127,14 +127,24 @@ export class ServicesService {
       buylink: "https://store.steampowered.com/app/2357570/Overwatch_2/",
       usato: true,
     }
-  ]
+  ];
 
-
-  constructor() { }
-
+  carousel : string[]= [
+    
+      'https://static.cdprojektred.com/cms.cdprojektred.com/16x9_big/56c9f65d12f0e9e7d16c7d47d1d00991d04dcca6-1920x1080.jpg',
+      'https://twistedvoxel.com/wp-content/uploads/2023/08/starfield.jpg'
+    
+  ];
+  
+  currentSlideIndex: number  = 0;
+  direction: number = 0;
 
   getVideogames() {
     return this.videogames;
+  }
+
+  public getSources(){
+    return this.carousel;
   }
 
 public buyRedirect(videogame: any): void {
@@ -143,6 +153,16 @@ public buyRedirect(videogame: any): void {
       window.open(link, '_blank'); //il link verrà aperto in una nuova finestra con _blank!
     }
   }
+
+  nextSlide() {
+    this.currentSlideIndex = (this.currentSlideIndex + 1) % this.carousel.length;
+  }
+
+  prevSlide() {
+    this.currentSlideIndex =
+      (this.currentSlideIndex - 1 + this.carousel.length) % this.carousel.length;
+  }
+
 }
 
 
